@@ -8,12 +8,13 @@ import UserCard from './components/UserCard'
 function App() {
   const [userEdit, setUserEdit] = useState()
   const [formIsClose, setFormIsClose] = useState(true)
-  const BASEURL = 'https://users-crud.academlo.tech'
+  const BASEURL = 'https://user-crud-cp4m.onrender.com'
+ // const BASEURL = 'http://localhost:8080'
 const [users, getUsers, createUser, deleteUser, updateUser]= useCrud(BASEURL)
 useEffect(() => {
   getUsers('/users/')
 },[])
-console.log(users)
+
 
 const handleOpenForm = () => {
   setFormIsClose(false)

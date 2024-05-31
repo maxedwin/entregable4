@@ -13,6 +13,7 @@ const FormUser = ({createUser, userEdit,updateUser, setUserEdit, formIsClose, se
         if(userEdit){
             // UPDATE
             updateUser('/users/', userEdit.id, data)
+            console.log(userEdit.id)
             setUserEdit()
         }else{
             //CREATE
